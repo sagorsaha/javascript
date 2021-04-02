@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script>
+		//problem number 1
+		var x=prompt(" Enter a Number: ");
+		if(x>0){
+			document.write(+x+" is a positive number");
+		}
+		else if(x<0){
+			document.write(+x+" is a negative number");
+		}
+		else(x==0)
+		{
+			document.write("the given number is Zero");
+		}
+
+		//problem number 06
+
+		var x=prompt(" Enter a Number: ");
+		var count=0;
+		var sum=0;
+		var remainder;
+		while(x!=0){
+			remainder=x%10;
+			sum=sum+remainder;
+			x=parseInt(x/10);
+			count=count+1;
+		}
+		document.write(+sum+"<br>");
+		document.write(count);
+
+		//problem number 8
+
+		var n=prompt(" Enter a Number: ");
+		for (var i = 1; i <=n; i++) {
+
+    var notPrime = false;
+    for (var j = 2; j <= i; j++) {
+        if (i%j==0 && j!==i) {
+            notPrime = true;
+        }
+    }
+    if (notPrime == false) {
+                document.write(+i+"<br>");
+    }
+}
+
+
+//problem 7
+
+        var num = parseInt(prompt("Enter the number:"));
+        var lastDigit = num % 10;
+
+        while (num > 9) {
+          num = parseInt(num / 10);
+        }
+        var result = lastDigit + num;
+   
+     document.write("The sum of the first and last digit is " + result);
+
+//problem 5
+
+var units = parseInt(prompt("Enter how many units consumed:"));
+        var bill = 0;
+        if (units > 0 && units <= 50) {
+          bill = units * 0.5;
+        } else if (units > 50 && units <= 150) {
+          bill = 50 * 0.5 + (units - 50) * 0.75;
+        } else if (units > 150 && units <= 250) {
+          bill = 50 * 0.5 + 100 * 0.75 + (units - 150) * 1.2;
+        } else if (units > 250) {
+          bill = 50 * 0.5 + 100 * 0.75 + 100 * 1.2 + (units - 250) * 1.5;
+        } else {
+          document.write("please provide a valid value for units.");
+        }
+
+        var total = bill + bill * 0.2;
+        document.write("Your total bill including vat is " + total + " taka");
+        //problem 3
+        var physics = parseInt(prompt("Enter numbers obtained in physics:"));
+        var chemistry = parseInt(prompt("Enter numbers obtained in Chemistry:"));
+        var biology = parseInt(prompt("Enter numbers obtained in biology:"));
+        var mathematics = parseInt(
+          prompt("Enter numbers obtained in mathematics:")
+        );
+        var computer = parseInt(prompt("Enter numbers obtained in computer:"));
+        var total = physics + chemistry + biology + mathematics + computer;
+
+        var avg = total / 5;
+
+        if (
+          physics < 33 ||
+          chemistry < 33 ||
+          biology < 33 ||
+          mathematics < 33 ||
+          computer < 33
+        ) {
+          document.write("CONGRATULATIONS!! You have FAILED successfully!!!");
+        } else {
+          if (avg >= 90) {
+            document.write("You've got grade A");
+          } else if (avg >= 80 && avg < 90) {
+            document.write("You've got grade B");
+          } else if (avg >= 70 && avg < 80) {
+            document.write("You've got grade C");
+          } else if (avg >= 60 && avg < 70) {
+            document.write("You've got grade D");
+          } else if (avg >= 40 && avg < 60) {
+            document.write("You've got grade E");
+          } else {
+            document.write("CONGRATULATIONS!! You have FAILED successfully!!!");
+          }
+        }
+
+        //problem 9
+
+         var num = parseInt(
+          prompt(
+            "Enter the number of terms upto which you wanna see the fibonacci series:"
+          )
+        );
+
+        var fibo = [0, 1];
+        for (let i = 2; i < num; i++) {
+          var entry = fibo[i - 1] + fibo[i - 2];
+          fibo.push(entry);
+        }
+
+        document.write("The fibonacci series upto " + num + " terms is " + fibo);
+
+          //problem 3
+
+var side1 = parseInt(
+          prompt("Enter the value of the first side of the triangle:")
+        );
+        var side2 = parseInt(
+          prompt("Enter the value of the second side of the triangle:")
+        );
+        var side3 = parseInt(
+          prompt("Enter the value of the third side of the triangle:")
+        );
+
+        if (
+          side1 + side2 <= side3 ||
+          side2 + side3 <= side1 ||
+          side1 + side3 <= side2
+        ) {
+          document.write("It is impossible to draw the triangle");
+        } else {
+          document.write("It is possible to draw the triangle");
+        }
+
+        //problem 10
+
+ var num = parseInt(
+          prompt("Enter the number upto which you wanna see the sum:")
+        );
+        var sum = 0;
+        for (let i = 0; i <= num; i++) {
+          sum = sum + i;
+        }
+        document.write("The sum of numbers upto " + num + " is " + sum);
+    </script>
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+	</script>
+
+</body>
+</html>
